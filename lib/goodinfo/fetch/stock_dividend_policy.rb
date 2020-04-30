@@ -104,7 +104,7 @@ module Goodinfo
 					value = (col == 0) ? e.child.child.child.text : e.child.text
 
 					unless column[col].nil?
-						if value == '-' 
+						if value == '-'
 							hash[column[col].to_sym] = value
 						elsif value =~ /^[+-]?[0-9]*[\.]?[0-9]+$/
 							hash[column[col].to_sym] = value.to_f
