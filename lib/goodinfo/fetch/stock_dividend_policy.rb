@@ -107,7 +107,7 @@ module Goodinfo
 						if value == '-'
 							hash[column[col].to_sym] = value
 						elsif value =~ /^[+-]?[0-9]*[\.]?[0-9]+$/
-							hash[column[col].to_sym] = value.to_f
+							hash[column[col].to_sym] = (col == 0) ? value.to_i : value.to_f
 						else
 							raise TableBodyError
 						end
