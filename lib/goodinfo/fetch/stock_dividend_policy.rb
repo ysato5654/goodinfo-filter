@@ -81,7 +81,7 @@ module Goodinfo
 					nil, nil, nil, nil,
 					nil, nil, nil, nil,
 					'cash_dividend_yield', 'stock_dividend_yield', 'total_dividend_yield', 
-					nil, nil, nil, nil, nil
+					nil, 'eps', nil, nil, nil
 				]
 				# reference
 				# => {:year => 0, :dividend => {:cash => 3, :stock => 6, :total => 7}, :dividend_yield => {:cash => 16, :stock => 17, :total => 18}}
