@@ -3,13 +3,13 @@ require 'open-uri'
 module Goodinfo
 	module Connection
 		def get(path, **params)
-			request(:get, path, params)
+			request(path, params)
 		end
 
 		private
 
-		def request(method, path, params)
-			connection(method, path, params)
+		def request(path, params)
+			connection(path, params)
 =begin
 			response = connection(method, path, params)
 
@@ -20,7 +20,7 @@ module Goodinfo
 =end
 		end
 
-		def connection(method, path, params)
+		def connection(path, params)
 			@url = Filter::BASE_URL + path + params[:code]
 
 			@charset = nil
